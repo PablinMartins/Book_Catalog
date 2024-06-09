@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Review Book</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            width: 45%;
+            margin: 50px auto;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        div {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+        background-color: #f8f9fa;
+        padding: 1rem;
+        text-align: center;
+        width: 100%;
+        margin-top: auto;
+        color: #6c757d;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <form method="POST">
+        <h1>Edit Review Book</h1>
+        {{ form.hidden_tag() }}
+        <div>
+            {{ form.title.label }}
+            {{ form.title(size=32) }}
+        </div>
+        <div>
+            {{ form.author.label }}
+            {{ form.author(size=32) }}
+        </div>
+        <div>
+            {{ form.comment.label }}
+            {{ form.comment(rows=4, cols=40) }}
+        </div>
+        <div>
+            {{ form.review.label }}
+            {{ form.review(rows=4, cols=40) }}
+        </div>
+        <div><input type="submit" class="btn" value="Submit"></div>
+    </form>
+
+</body>
+
+    <footer>
+        <p>&copy; 2024 Pablo Martins. Todos os direitos reservados.</p>
+    </footer>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ book.title }}</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 60%;
+            margin: 20px;
+            align-self: center;
+            background-color: #333;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin: 20px;
+        }
+
+        .info-container {
+            background-color: #121212;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px;
+        }
+
+        p {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        strong {
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        footer {
+        background-color: #f8f9fa;
+        padding: 1rem;
+        text-align: center;
+        width: 100%;
+        margin-top: auto;
+        color: #6c757d;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">       
+        <div class="info-container">
+            <h1>{{ book.title }}</h1>
+            <p><strong>Author:</strong> <span style="color: #28a745;">{{ book.author }}</span></p> 
+            <p><strong>Comment:</strong>
+            {{ book.comment }}</p>
+            <p><strong>Review:</strong> {{ book.review }} Stars</p>
+        </div>
+    </div>
+
+</body>
+
+    <footer>
+        <p>&copy; 2024 Pablo Martins. Todos os direitos reservados.</p>
+    </footer>
+
+</html>
